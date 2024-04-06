@@ -16,8 +16,8 @@ This project is a Web3-based application for depositing and withdrawing funds, l
 Before using this application, ensure you have a compatible Web3 wallet such as MetaMask installed on your browser.
 
 ## Screenshots
-![Landing](./public/Landing Image.jpg)
-![dashboard page](./public/dashboard page.jpg)
+![Landing](https://github.com/Chenyi-Hou/rainbowkit-web3/blob/master/public/Landing%20Image.png)
+![dashboard page](https://github.com/Chenyi-Hou/rainbowkit-web3/blob/master/public/dashboard%20page.png)
 
 <!-- ## Installation
 
