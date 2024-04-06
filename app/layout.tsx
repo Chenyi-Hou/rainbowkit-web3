@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Providers } from './_provider'
+import { Button } from "@/components/ui/button"
+import '@rainbow-me/rainbowkit/styles.css';
+import Link from "next/link"
+import { ConnectButton, WalletButton } from '@rainbow-me/rainbowkit';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +21,40 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          <header className="border-b border-b-gray-300 w-full fixed backdrop-blur-sm px-4 lg:px-6 py-2 lg:py-2 flex flex-col gap-2">
+            <div className="flex justify-between gap-2">
+              <Link className="flex items-center gap-2" href="/">
+                <ActivityIcon className="h-6 w-6" />
+                <span className="font-semibold">Acme Bank</span>
+              </Link>
+              <ConnectButton />
+            </div>
+          </header>
+          {children}
+        </Providers></body>
     </html>
   );
+}
+
+
+
+function ActivityIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+    </svg>
+  )
 }
